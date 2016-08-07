@@ -1,5 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en" ng-app="">
+<!DOCTYPE html>
+<html lang="en" ng-app="WebAppMaker">
 <head>
 	<meta charset="UTF-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -7,18 +7,15 @@
     <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
 	<title>Document</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/assignment/css/style.css" />
+	<script src="app.js"></script>
+	<script src="config.js"></script>
 </head>
-<body> -->
-	<div class="container">
-		<h1>Register</h1>
-		<input type="text" class="form-control" placeholder="username" />
-		<input type="password" class="form-control" placeholder="password" />
-		<input type="password" class="form-control" placeholder="verify password" />
-		<a href="#/prolfile" class="btn btn-primary btn-block" role="button">Register</a>
-		<a href="#/login" class="btn btn-danger btn-block" role="button">Cancel</a>
+<body>
+	<div ng-view>
+		
 	</div>
-<!-- </body>
+</body>
 </html>
- -->
