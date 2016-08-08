@@ -5,7 +5,9 @@
 			function Config($routeProvider){
 				$routeProvider	
 					.when("/login",{
-						templateUrl:"/assignment/user/login.html"
+						templateUrl:"/assignment/user/login.html",
+						controller:"LoginController",
+						controllerAs : "model"
 					})
 					.when("/register",{
 						templateUrl:"/assignment/user/register.html"

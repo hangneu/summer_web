@@ -9,10 +9,13 @@
 </head>
 <body> -->
 	<div class="container">
+		<div class="alert alert-danger" ng-if="model.error">
+			{{model.error}}
+		</div>
 		<h1>Login</h1>
-		<input type="text" class="form-control" placeholder="username" />
-		<input type="password" class="form-control" placeholder="password" />
-		<a href="#/profile" class="btn btn-primary btn-block" role="button">Login</a>
+		<input type="text" ng-model="username" class="form-control" placeholder="username" />
+		<input type="password" ng-model="password" class="form-control" placeholder="password" />
+		<a ng-click="model.login(username,password)"  class="btn btn-primary btn-block" role="button">Login</a>
 		<a href="#/register" class="btn btn-success btn-block" role="button">Register</a>
 	</div>
 <!-- </body>
