@@ -11,7 +11,7 @@
 ];
 		function ProfileController($routeParams){
 			var vm = this;
-			var updateUser = updateUser;
+			vm.updateUser = updateUser;
 
 			var id = $routeParams["id"];
 			var index = -1;
@@ -25,7 +25,6 @@
 				users[index].firstName = vm.user.firstName;
 				users[index].lastName = vm.user.lastName;
 				users[index].email = vm.user.email;
-
 			}
 			function init(){
 				for (var i in users){
