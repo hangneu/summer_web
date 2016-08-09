@@ -12,8 +12,10 @@
 					.when("/register",{
 						templateUrl:"/assignment/user/register.html"
 					})
-					.when("/profile",{
-						templateUrl:"/assignment/user/profile.html"
+					.when("/profile/:id",{
+						templateUrl:"/assignment/user/profile.html",
+						controller:"ProfileController",
+						controllerAs : "model"
 					});
 			}
 })();
