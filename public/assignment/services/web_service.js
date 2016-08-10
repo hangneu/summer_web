@@ -13,7 +13,8 @@
 ];
 		function WebsiteService(){
 			var api = {
-				findWebsitesForUser: findWebsitesForUser
+				findWebsitesForUser: findWebsitesForUser,
+				findWebsiteById: findWebsiteById
 			};
 			return api;
 			function findWebsitesForUser(userId){
@@ -24,6 +25,15 @@
 					}
 				}
 				return result;
+			}
+
+			function findWebsiteById(webisteId){
+				for (var i in websites){
+					if (websites[i]._id === webisteId){
+						return websites[i];
+					}
+				}
+				return null;
 			}
 		}
 })();

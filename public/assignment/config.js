@@ -24,8 +24,8 @@
 					})
 					.when("/user/:userId/website/:websiteId",{
 						templateUrl:"/assignment/website/website-edit.html",
-						// controller:"WebsiteListController",
-						// controllerAs : "model"
+						controller:"EditWebsiteController",
+						controllerAs : "model"
 					});
 			}
 })();
