@@ -17,10 +17,10 @@
 						controller:"ProfileController",
 						controllerAs : "model"
 					})
-					.when("/user/:uid/website",{
+					.when("/user/:userId/website",{
 						templateUrl:"/assignment/website/website-lists.html",
-						// controller:"ProfileController",
-						// controllerAs : "model"
+						controller:"WebsiteListController",
+						controllerAs : "model"
 					});
 			}
 })();
