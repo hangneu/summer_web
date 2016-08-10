@@ -16,6 +16,11 @@
 						templateUrl:"/assignment/user/profile.html",
 						controller:"ProfileController",
 						controllerAs : "model"
+					})
+					.when("/user/:uid/website",{
+						templateUrl:"/assignment/website/website-lists.html",
+						// controller:"ProfileController",
+						// controllerAs : "model"
 					});
 			}
 })();
