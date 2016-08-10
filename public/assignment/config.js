@@ -21,6 +21,12 @@
 						templateUrl:"/assignment/website/website-lists.html",
 						controller:"WebsiteListController",
 						controllerAs : "model"
+					})
+					.when("/user/:userId/website/:websiteId",{
+						templateUrl:"/assignment/website/website-edit.html",
+						// controller:"WebsiteListController",
+						// controllerAs : "model"
 					});
 			}
 })();
+// /assignment/website/website-edit.html
