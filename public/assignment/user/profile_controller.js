@@ -1,7 +1,7 @@
 (function(){
 	angular
 		.module("WebAppMaker")
-		.controller("LoginController",LoginController)
+		// .controller("LoginController",LoginController)
 		.controller("ProfileController",ProfileController);
 		
 		var users = [
@@ -42,18 +42,27 @@
 
 
 
-		function LoginController($location){
-			var vm = this;
-			vm.login = function(username,password){
-				// for (var i in users ){
-				// 	if(users[i].username === username && users[i].password === password){
-				// 		var id = users[i]._id;
-				// 		$location.url("/profile/" + id);
-				// 	}else{
-				// 		vm.error = "User not found!!!!";
-				// 	}
-				// }	
-			};
-		}
+// 		function LoginController($location){
+// 			var vm = this;
+// 			vm.login = function(username,password){
+// 				for (var i in users ){
+// 					if(users[i].username === username && users[i].password === password){
+// 						var id = users[i]._id;
+// 						$location.url("/profile/" + id);
+// 					}else{
+// 						vm.error = "User not found!!!!";
+// 					}
+// 				}	
+// 			};
+// 		}
 		
-})();
+ })
+();
+
+
+
+
+
+
+
+
