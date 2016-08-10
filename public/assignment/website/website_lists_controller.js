@@ -5,8 +5,11 @@
 		function WebsiteListController($routeParams,WebsiteService){
 			var vm = this;
 			var websites = null;
-			var userId = $routeParams.userId;
-			vm.websites =WebsiteService.findWebsitesForUser(userId);
-			console.log("good");
+			function init(){
+				var userId = $routeParams.userId;
+				vm.websites =WebsiteService.findWebsitesForUser(userId);
+				console.log("good");
+			}
+			init();
 		}
 })();
