@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" ng-app="">
 <head>
 	<meta charset="UTF-8">
@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="/assignment/css/style.css" />
 </head>
 <body>
- -->
  <div  class = "container">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -49,6 +48,9 @@
 				<h5 ng-switch-when="5">{{widget.text}}</h5>
 				<h6 ng-switch-when="6">{{widget.text}}</h6>
 			</div>
+		</div>
+		<div ng-switch-when="IMAGE" class="jga-widget">
+			<img ng-src="{{widget.url}}" alt="ramdon" />
 		</div>
 		<div ng-switch-default>
 			{{widget}}
@@ -120,4 +122,4 @@
 </nav>
 </div>
 <!-- </body>
-</html> -->
+</html>
