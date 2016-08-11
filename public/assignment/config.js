@@ -32,9 +32,14 @@
 						controller:"WidgetListController",
 						controllerAs : "model"
 					})
+					.when("/user/:userId/website/:websiteId/page/:pageId/widget/new",{
+						templateUrl:"/assignment/widget/widget-chooser.html"
+						controller:"WidgetChooserController",
+						controllerAs : "model"
+					})
 					.otherwise({
 						redirectTo:"/login"
 					});
 			}
 })();
-// /assignment/website/website-edit.html
+// /assignment/widget/widget-chooser.html
