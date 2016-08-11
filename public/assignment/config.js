@@ -26,6 +26,14 @@
 						templateUrl:"/assignment/website/website-edit.html",
 						controller:"EditWebsiteController",
 						controllerAs : "model"
+					})
+					.when("/user/:userId/website/:websiteId/page/:pageId/widget",{
+						templateUrl:"/assignment/widget/widget-list.html",
+						controller:"WidgetListController",
+						controllerAs : "model"
+					})
+					.otherwise({
+						redirectTo:"/login"
 					});
 			}
 })();
