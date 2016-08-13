@@ -33,7 +33,7 @@
 						controllerAs : "model"
 					})
 					.when("/user/:userId/website/:websiteId/page/:pageId/widget/new",{
-						templateUrl:"/assignment/widget/widget-chooser.html"
+						templateUrl:"/assignment/widget/widget-chooser.html",
 						controller:"WidgetChooserController",
 						controllerAs : "model"
 					})
