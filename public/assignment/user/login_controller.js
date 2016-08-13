@@ -39,14 +39,26 @@
 		function LoginController($location,UserService){
 			var vm = this;
 			vm.login = function(username,password){
-				var user = UserService.findUserByUsernameAndPassword(username,password);
-				if (user){
-					var id = user._id;
-					$location.url("/profile/"+id);
-				}
-				else{
-					vm.error = "User not found";
-				}
+				UserService
+					.findUserByUsernameAndPassword(username,password)
+					.then(function(response){
+						console.log(response);
+						var user = response.data;
+						if(user.username != undefined){							
+							var id = user._id;
+							$location.url("/profile/"+id);
+						}
+						else{
+							vm.error = "User not found";
+						}
+					});
+				// if (user){
+				// 	var id = user._id;
+				// 	$location.url("/profile/"+id);
+				// }
+				// else{
+				// 	vm.error = "User not found";
+				// }
 			};
 		}
 		
