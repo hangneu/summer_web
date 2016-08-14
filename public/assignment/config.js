@@ -10,7 +10,9 @@
 						controllerAs : "model"
 					})
 					.when("/register",{
-						templateUrl:"/assignment/user/register.html"
+						templateUrl:"/assignment/user/register.html",
+						controller:"RegisterController",
+						controllerAs : "model"
 					})
 					.when("/profile/:id",{
 						templateUrl:"/assignment/user/profile.html",

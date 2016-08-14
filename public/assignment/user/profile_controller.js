@@ -31,7 +31,13 @@
 				}
 			}
 			function init(){
-				vm.user = UserService.findUserById(id);
+				console.log("former line");
+				UserService
+					.findUserById(id)
+					.then(function(response){
+						vm.user = response.data;
+					});
+				console.log("last line");
 			}
 		}
 
