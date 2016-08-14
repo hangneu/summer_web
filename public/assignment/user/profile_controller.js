@@ -22,22 +22,22 @@
 			
 			init();
 			function updateUser(){
-				var result = UserService.updateUser(id,vm.user);
-				if (result === true){
-					vm.success = "User successfully update";
-				}
-				else{
-					vm.error = "not found?";
-				}
+				UserService
+						.updateUser(id,vm.user)
+						.then(
+							function(response){
+								vm.success = "Updated successfully";
+						},
+							function(error){
+								vm.error = "Unable to update user";
+							});
 			}
 			function init(){
-				console.log("former line");
 				UserService
 					.findUserById(id)
 					.then(function(response){
 						vm.user = response.data;
 					});
-				console.log("last line");
 			}
 		}
 
