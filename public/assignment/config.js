@@ -9,6 +9,11 @@
 						controller:"LoginController",
 						controllerAs : "model"
 					})
+					.when("/flickr",{
+						templateUrl:"/assignment/widget/widget-flickr-search.html",
+						controller:"FlickImageSearchController",
+						controllerAs:"model"
+					})
 					.when("/register",{
 						templateUrl:"/assignment/user/register.html",
 						controller:"RegisterController",

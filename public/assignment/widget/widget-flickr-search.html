@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<p style="padding-left:15px;margin-right:15px;" class="navbar-text pull-left">
+					<a href="/assignment/page/page-list.html" class="navbar-link">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+				</p>
+				<a href="#" class="navbar-brand">
+					Search Flickr
+				</a>
+				<p class="navbar-text pull-right" style="margin-right:15px;">
+					<a href="#/user/:userId/website/:websiteId/page/:pageId/widget/new" class="navbar-link">
+						<span class="glyphicon glyphicon-plus"></span>
+					</a>
+				</p>
+			</div>
+		</div>
+	</nav>
+
+
+<div class="container">
+	<div class="input-group">
+	    <input ng-model="searchText" type="text" class="form-control">
+	    <span class="input-group-btn">
+	        <a ng-click="model.searchPhotos(searchText)" class="btn btn-default" type="button">
+	            <span class="glyphicon glyphicon-search"></span>
+	        </a>
+	    </span>
+	</div>
+</div>
+
+<div class="row">
+	<div  ng-repeat="photo in model.photos.photo" class="col-xs-4">
+		<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_s.jpg" />
+	</div>
+</div>
+<!-- <img src="https://farm9.staticflickr.com/8130/28959578096_07d14f08d9_s.jpg" alt="e">
+<img src="https://farm9.staticflickr.com/8466/28705920730_e0be3a7977_s.jpg" alt="e"> -->
+
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="row navbar-text">
+      <div class="col-xs-3 text-center"></div>
+      <div class="col-xs-3 text-center"></div>
+      <div class="col-xs-3 text-center"></div>
+      <div class="col-xs-3 text-center">
+         <a href="/assignment/user/profile.html">
+         	<span class="glyphicon glyphicon-user"></span>
+         </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
