@@ -19,7 +19,10 @@
 			};
 			 return $http.post("/api/user/",user);
 		}
-		function deleteUser(id){}
+		function deleteUser(id){
+			var url = "/api/user/"+id ;
+			return $http.delete(url);
+		}
 		function updateUser(id,newUser){
 			var url = "/api/user/"+ id;
 			return $http.put(url,newUser);

@@ -4,15 +4,10 @@
 		// .controller("LoginController",LoginController)
 		.controller("ProfileController",ProfileController);
 		
-// 		var users = [
-// {_id: "123", username: "alice",    password: "alice",    firstName: "Alice", email:"shangneu1992@gmail.com",  lastName: "Wonder"  },
-// {_id: "234", username: "bob",      password: "bob",      firstName: "Bob",  email:"shangneu1992@gmail.com",    lastName: "Marley"  },
-// {_id: "345", username: "charly",   password: "charly",   firstName: "Charly", email:"shangneu1992@gmail.com",  lastName: "Garcia"  },
-// {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose", email:"shangneu1992@gmail.com",    lastName: "Annunzi" }
-// ];
-		function ProfileController($routeParams,UserService){
+		function ProfileController($routeParams,$location,UserService){
 			var vm = this;
 			vm.updateUser = updateUser;
+			vm.unregister = unregister;
 
 			var id = $routeParams["id"];
 			var index = -1;
@@ -21,6 +16,18 @@
 			
 			
 			init();
+
+			function unregister($){
+				UserService
+					.deleteUser(id)
+					.then(
+						function(response){
+							$location.url("/login");
+						},
+						function(error){
+							vm.error = "Unable to remove user";
+						});
+			}
 			function updateUser(){
 				UserService
 						.updateUser(id,vm.user)
