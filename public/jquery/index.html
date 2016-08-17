@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<script src="../jquery_ui/jquery-ui.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-8 col-xs-offset-2">
+			<h1>he</h1>
+
+	<ul class="list">
+		<li></li>
+		<li>e</li>
+		<li></li>
+	</ul>
+	<script>
+		$("h1")
+			.html("Hello from jquery")
+			.css("background-color","#e3e3e3");
+		var list = $(".list");
+		for (var i=0;i<9;i++){
+			list.append("<li>Item "+ i + "</li>");
+		}
+		list.sortable({
+			axis:'x'
+		});
+	</script>
+		</div>
+	</div>
+</body>
+</html>

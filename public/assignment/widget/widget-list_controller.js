@@ -25,6 +25,13 @@
 			console.log(url);
 			return $sce.trustAsResourceUrl(url);
 		}
+		function init(){
+			$(".container")
+				.sortable({
+					asix:'y'
+				});
+		}
+		init();
 		function getTrustedHtml(widget){
 			var html = $sce.trustAsHtml(widget.text);
 			return html;

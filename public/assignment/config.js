@@ -39,6 +39,11 @@
 						controller:"WidgetListController",
 						controllerAs : "model"
 					})
+					.when("/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId",{
+						templateUrl:"/assignment/widget/widget-edit.html",
+						controller:"WidgetEditController",
+						controllerAs : "model"
+					})
 					.when("/user/:userId/website/:websiteId/page/:pageId/widget/new",{
 						templateUrl:"/assignment/widget/widget-chooser.html",
 						controller:"WidgetChooserController",

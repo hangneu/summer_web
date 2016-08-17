@@ -44,7 +44,7 @@
 					.then(function(response){
 						console.log(response);
 						var user = response.data;
-						if(user.username != undefined){							
+						if(user != null){							
 							var id = user._id;
 							$location.url("/profile/"+id);
 						}
