@@ -1,79 +1,65 @@
-<!-- <!DOCTYPE html>
-<html lang="en" ng-app="">
-<head>
-	<meta charset="UTF-8">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
-	<title>Document</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="/assignment/css/style.css" />
-</head>
-<body>
- -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<p style="padding-left:15px" class="navbar-text pull-left" style="margin-right:15px;">
-					<a href="website-lists.html" class="navbar-link">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-				</p>
-				<a href="#" class="navbar-brand">
-					Edit Website
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<p style="padding-left:15px" class="navbar-text pull-left" style="margin-right:15px;">
+				<a href="website-lists.html" class="navbar-link">
+					<span class="glyphicon glyphicon-chevron-left"></span>
 				</a>
-				<p class="navbar-text pull-right" style="margin-right:15px;">
-					<a href="website-lists.html" class="navbar-link">
-						<span class="glyphicon glyphicon-ok"></span>
-					</a>
-				</p>
-			</div>
+			</p>
+			<a href="#" class="navbar-brand">
+				Edit Website
+			</a>
+			<p class="navbar-text pull-right" style="margin-right:15px;">
+				<a href="website-lists.html" class="navbar-link">
+					<span class="glyphicon glyphicon-ok"></span>
+				</a>
+			</p>
 		</div>
-	</nav>
-
-
-
-	<div class="container">
-	{{model.website.name}}
-		<form>
-			<div class="form-group">
-				<label for="website-name">Website Name</label>
-				<input type="text" placeholder="Google" ng-model="model.website.name" class="form-control" id="website-name" />
-			</div>
-			<div class="form-group">
-				<label for="website-description">Website Description</label>
-				<textarea placeholder="most famous in the world" class="form-control" id="website-description" cols="30" rows="10"></textarea>
-			</div>
-		</form>
-		<a href="website-lists.html" class="btn btn-danger btn-block" role="button">Delete</a>
 	</div>
-
-	<nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <div class="row navbar-text">
-      <div class="col-xs-3 text-center">
-          <a href="#">
-            <span class="glyphicon glyphicon-ok"></span>
-          </a>
-      </div>
-      <div class="col-xs-3 text-center">
-          <a href="#">
-            <span class="glyphicon glyphicon-plus"></span>
-          </a>
-      </div>
-      <div class="col-xs-3 text-center">
-          <a href="#">
-            <span class="glyphicon glyphicon-star"></span>
-          </a>
-      </div>
-      <div class="col-xs-3 text-center">
-          <a href="#">
-            <span class="glyphicon glyphicon-heart"></span>
-          </a>
-      </div>
-    </div>
-  </div>
 </nav>
-<!-- </body>
-</html> -->
+
+
+
+<div class="container">
+<!-- {{model.website}}
+<hr>
+{{model.website[0]._id}}
+<hr> -->
+	<form>
+		<div class="form-group">
+			<label for="website-name">Website Name</label>
+			<input ng-model="model.website[0].name" type="text" placeholder="Google" ng-model="model.website.name" class="form-control" id="website-name" />
+		</div>
+		<div class="form-group">
+			<label for="website-description">Website Description</label>
+			<textarea placeholder="most famous in the world" class="form-control" ng-model="model.website[0].description" id="website-description" cols="30" rows="10"></textarea>
+		</div>
+	</form>
+	<a href="website-lists.html" class="btn btn-danger btn-block" role="button">Delete</a>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  	<div class="container">
+    	<div class="row navbar-text">
+	     	<div class="col-xs-3 text-center">
+	       	   <a href="#">
+	        	    <span class="glyphicon glyphicon-ok"></span>
+	          </a>
+	     	</div>
+	     	<div class="col-xs-3 text-center">
+	          <a href="#">
+	            <span class="glyphicon glyphicon-plus"></span>
+	          </a>
+	      	</div>
+	     	 <div class="col-xs-3 text-center">
+	          <a href="#">
+	            <span class="glyphicon glyphicon-star"></span>
+	          </a>
+	     	</div>
+	      	<div class="col-xs-3 text-center">
+	          <a href="#">
+	            <span class="glyphicon glyphicon-heart"></span>
+	          </a>
+	      	</div>
+    	</div>
+  	</div>
+</nav>

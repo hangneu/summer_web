@@ -19,7 +19,7 @@
 					Websites
 				</a>
 				<p class="navbar-text pull-right" style="margin-right:15px;">
-					<a href="website-edit.html" class="navbar-link">
+					<a href="#/user/{{model.useId}}/websites/new" class="navbar-link">
 						<span class="glyphicon glyphicon-plus"></span>
 					</a>
 				</p>
@@ -35,7 +35,7 @@
 				<a href="/assignment/page/page-list.html">
 					{{website.name}}
 				</a>
-				<a href="#/user/{{website.developerId}}/website/{{website._id}}">
+				<a href="#/user/{{website._user}}/website/{{website._id}}">
 					<span class="glyphicon glyphicon-play pull-right"></span>
 					<span class="glyphicon glyphicon-cog pull-right"></span>
 				</a>

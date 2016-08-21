@@ -34,6 +34,11 @@
 						controller:"EditWebsiteController",
 						controllerAs : "model"
 					})
+					.when("/user/:userId/websites/new",{
+						templateUrl:"/assignment/website/websie-new.html",
+						controller:"NewWebsiteController",
+						controllerAs : "model"
+					})
 					.when("/user/:userId/website/:websiteId/page/:pageId/widget",{
 						templateUrl:"/assignment/widget/widget-list.html",
 						controller:"WidgetListController",
